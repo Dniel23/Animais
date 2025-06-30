@@ -95,5 +95,4 @@ app.listen(port, () => {
 app.listen(port, () => {
     console.log(`Servidor backend rodando em http://localhost:${port}`);
     console.log('Aguardando doações... 🐾');
->>>>>>> 7c06c90b36308382b7a9ac53cdb784bc570f8806
 });
