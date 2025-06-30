@@ -1,0 +1,5 @@
+# Arquivo de segredos locais
+file.env
+
+# Pasta de dependências do Node
+node_modules/
