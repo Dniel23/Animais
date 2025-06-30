@@ -4,74 +4,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UEG - Doação para Animais</title>
+    <title>PetsUEG - Adoção e Doação de Animais</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&family=Irish+Grover&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <div class="header-content">
-            <svg class="header-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                    d="M12 2a10 10 0 00-4.89 1.52 1 1 0 00-.67 1.29 1 1 0 001.29.67A8 8 0 0119 10a1 1 0 002 0 10 10 0 00-9-8zM4 10a1 1 0 000 2 8 8 0 0111.11 6.48 1 1 0 001.29.67 1 1 0 00.67-1.29A10 10 0 004 10zm13 3a1 1 0 011 1v2a1 1 0 11-2 0v-2a1 1 0 011-1zm-6 0a1 1 0 011 1v2a1 1 0 11-2 0v-2a1 1 0 011-1z" />
-                <path
-                    d="M12 4a8 8 0 00-7.89 6.48 1 1 0 00.67 1.29 1 1 0 001.29-.67A6 6 0 0118 12a1 1 0 002 0A8 8 0 0012 4z" />
-            </svg>
 
-            <h1>Faça a sua doação e ajude os animais!</h1>
-            <p class="header-subtitle">Um gesto de carinho que transforma vidas.</p>
-        </div>
-        <div class="wave-container">
-            <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path fill="#F5F5F5" fill-opacity="1"
-                    d="M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,149.3C672,149,768,203,864,218.7C960,235,1056,213,1152,192C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-                </path>
-            </svg>
-        </div>
-    </header>
+    <div class="page-container">
 
-    <main>
-        <div class="container">
-            <section id="intro">
-                <h2>Faça a diferença na vida de um animal</h2>
-                <p>Sua doação nos ajuda a fornecer cuidado, alimentação e um lar seguro para animais resgatados. Com
-                    qualquer valor, você contribui para um futuro melhor para eles.</p>
-            </section>
+        <header class="header">
+            <a href="index.html" class="logo">PetsUEG</a>
+            <nav class="main-nav">
+                <a href="#inicio">Início</a>
+                <a href="pets.html">Pets</a>
+                <a href="#sobre">Sobre nós</a>
+            </nav>
+            <a href="#contato" class="cta-button contact-button">Entre em contato</a>
+        </header>
 
-            <section id="donation-form">
-                <h3>Quero Doar!</h3>
-                <form id="form-doacao">
-                    <label for="nome">Seu nome completo:</label>
-                    <input type="text" id="nome" name="nome" placeholder="Nome que aparecerá no certificado" required>
-
-                    <label for="valor">Valor da doação (R$):</label>
-                    <input type="number" id="valor" name="valor" min="1" step="any" placeholder="Ex: 25,50" required>
-
-                    <button type="submit">Gerar PIX para Doação</button>
-                </form>
-            </section>
-
-            <section id="pix-area" class="hidden">
-                <h3>Obrigado por sua iniciativa!</h3>
-                <p>Use o QR Code abaixo ou a chave "Copia e Cola" para finalizar sua doação. Após a confirmação do
-                    pagamento, seu certificado será gerado automaticamente!</p>
-                <div id="pix-qrcode">
+        <main>
+            <section id="inicio" class="hero-section">
+                <div class="hero-text">
+                    <h1>Ajude um pet hoje mesmo!</h1>
+                    <p class="subtitle">Cada doação ajuda a alimentar, cuidar e proporcionar um lar temporário ou definitivo para um pet em situação de vulnerabilidade. Doe agora e faça parte dessa corrente de amor!</p>
+                    <div class="hero-buttons">
+                        <a href="#donation-form" class="cta-button primary">Doe agora</a>
+                        <a href="pets.html" class="cta-button secondary">Veja os Pets</a>
+                    </div>
                 </div>
-                <textarea id="pix-copia-cola" readonly></textarea>
-                <button id="btn-download" disabled>Pagamento confirmado! Baixar Certificado</button>
-                <p id="status-pagamento">Aguardando pagamento...</p>
+                <div class="hero-image-area">
+                    <div class="hero-background-shape"></div>
+                    <img src="/imgs/dog1.png" alt="Cachorro feliz para adoção" class="hero-image" />
+                </div>
             </section>
-        </div>
-    </main>
 
-    <footer>
-        <p>Feito com ❤️ por Daniel e Ana</p>
-    </footer>
+            <!--<section id="pets-preview" class="pets-section">
+                <h2>Nossos Pets</h2>
+                <div class="pet-cards-container">
+                    <div class="pet-card">
+                        <img src="https://placehold.co/411x268/cccccc/000000?text=Spike" alt="Foto do Spike" />
+                        <div class="pet-card-info">
+                            <h3>Spike, 9 meses</h3>
+                            <p>Este é o Spike, um filhote brincalhão e cheio de energia que está pronto para encontrar um lar amoroso.</p>
+                            <a href="#" class="cta-button adopt-button">Adotar</a>
+                        </div>
+                    </div>
+                    <div class="pet-card">
+                        <img src="https://placehold.co/411x268/cccccc/000000?text=Luna" alt="Foto da Luna" />
+                        <div class="pet-card-info">
+                            <h3>Luna, 1 ano</h3>
+                            <p>Luna é uma gatinha muito dócil e carinhosa. Ela adora um colo e está ansiosa por uma família.</p>
+                            <a href="#" class="cta-button adopt-button">Adotar</a>
+                        </div>
+                    </div>
+                    <div class="pet-card">
+                        <img src="https://placehold.co/411x268/cccccc/000000?text=Max" alt="Foto do Max" />
+                        <div class="pet-card-info">
+                            <h3>Max, 2 anos</h3>
+                            <p>Max é um companheiro leal e protetor. Ele se dá bem com crianças e outros animais.</p>
+                            <a href="#" class="cta-button adopt-button">Adotar</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="pets.html" class="cta-button view-more-button">Ver mais</a>
+            </section>-->
+
+            <section id="donation-form" class="donation-section">
+                <div class="donation-content">
+                    <h2>Sua doação salva nossos amigos!</h2>
+                    <div class="donation-images">
+                        <div class="donation-bg-shape"></div>
+                        <img src="/imgs/dog2.png" alt="Animal resgatado" class="donation-image-1" />
+                        <img src="/imgs/dog4.png" alt="Outro animal resgatado" class="donation-image-2" />
+                    </div>
+                </div>
+                <div class="form-wrapper">
+                    <div id="form-doacao-container">
+                        <h3>Quero Doar!</h3>
+                        <form id="form-doacao">
+                            <label for="nome">Seu nome completo:</label>
+                            <input type="text" id="nome" name="nome" placeholder="Nome que aparecerá no certificado" required>
+                            <label for="valor">Valor da doação (R$):</label>
+                            <input type="number" id="valor" name="valor" min="1" step="any" placeholder="Ex: 25,50" required>
+                            <button type="submit" class="cta-button">Gerar PIX para Doação</button>
+                        </form>
+                    </div>
+                    <div id="pix-area" class="hidden">
+                        <h3>Obrigado por sua iniciativa!</h3>
+                        <p>Use o QR Code ou a chave abaixo para finalizar.</p>
+                        <div id="pix-qrcode"></div>
+                        <textarea id="pix-copia-cola" readonly></textarea>
+                        <button id="btn-download" class="cta-button" disabled>Baixar Certificado</button>
+                        <p id="status-pagamento">Aguardando confirmação do pagamento...</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sobre" class="about-us-section">
+                <h2>Sobre nós</h2>
+                <p class="about-description">Somos um projeto da nossa faculdade dedicado a transformar a vida de animais e pessoas por meio da adoção responsável.</p>
+              <!--  <div class="gallery">
+                    <img src="https://placehold.co/390x400/fafafa/000?text=Equipe+1" alt="Membro da equipe" />
+                    <img src="https://placehold.co/390x400/fafafa/000?text=Equipe+2" alt="Membro da equipe" />
+                    <img src="https://placehold.co/390x400/fafafa/000?text=Equipe+3" alt="Membro da equipe" />
+                    <img src="https://placehold.co/390x400/fafafa/000?text=Equipe+4" alt="Membro da equipe" />
+                    <img src="https://placehold.co/390x400/fafafa/000?text=Equipe+5" alt="Membro da equipe" />
+                    <img src="https://placehold.co/390x400/fafafa/000?text=Equipe+6" alt="Membro da equipe" />
+                </div>-->
+            </section>
+
+        </main>
+
+        <footer id="contato" class="footer-main">
+            <div class="footer-column">
+                <div class="logo-footer">PetsUEG</div>
+                <div class="contact-info">
+                    <p><strong>Localização:</strong>  744, R. Augusto Monteiro de Godói, 580 - Vila Crambery, Pires do Rio - GO, 75200-000</p>
+                    <p><strong>Telefone:</strong> (64) 3461-2267</p>
+                    <p><strong>E-mail:</strong> adocao@ueg.com</p>
+                    <p><strong>Horários:</strong> Seg. a Sex. das 08:00 as 22:30</p>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Deixe seu Contato</h4>
+                <form class="footer-form">
+                    <input type="text" placeholder="Nome completo">
+                    <input type="email" placeholder="Digite seu e-mail">
+                    <input type="tel" placeholder="Digite seu telefone">
+                    <button type="submit" class="cta-button">Contatar</button>
+                </form>
+            </div>
+            <div class="footer-column footer-links">
+                 <a href="#inicio">Início</a>
+                 <a href="pets.html">Pets</a>
+                 <a href="#sobre">Sobre nós</a>
+                 <a href="#contato">Contatos</a>
+            </div>
+             <div class="footer-credits">
+                <p>Feito por Ana e Daniel</p>
+            </div>
+        </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
-
 </html>
