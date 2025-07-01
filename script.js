@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         form.querySelector('button').disabled = true;
 
         try {
-            const response = await fetch('voiceless-adela-dniel23-992f12ba.koyeb.app/gerar-pagamento', {
+            const response = await fetch('https://voiceless-adela-dniel23-992f12ba.koyeb.app/gerar-pagamento', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const interval = setInterval(async () => {
             try {
-                const response = await fetch(`voiceless-adela-dniel23-992f12ba.koyeb.app/status-pagamento/${currentPaymentId}`);
+                const response = await fetch(`https://voiceless-adela-dniel23-992f12ba.koyeb.app/status-pagamento/${currentPaymentId}`);
                 const data = await response.json();
 
                 if (data.status === 'approved') {
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     btnDownload.disabled = false;
                     btnDownload.onclick = () => {
                         // A URL agora aponta para a imagem do certificado
-                        window.open(`voiceless-adela-dniel23-992f12ba.koyeb.app/gerar-certificado?id=${currentPaymentId}`, '_blank');
+                        window.open(`https://voiceless-adela-dniel23-992f12ba.koyeb.app/gerar-certificado?id=${currentPaymentId}`, '_blank');
                     };
                 }
             } catch (error) {
